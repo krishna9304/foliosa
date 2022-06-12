@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  background: #0575e6; /* fallback for old browsers */
+  background: #ee0979; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #ff6a00,
+    #ee0979
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ff6a00,
+    #ee0979
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  img {
+    width: 30%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    transition-duration: 100ms;
+    animation: changeStyle 2s ease-in-out infinite;
+    margin-bottom: 10px;
+
+    @keyframes changeStyle {
+      0% {
+        text-decoration: overline;
+      }
+      25% {
+        text-decoration: underline dotted;
+      }
+      50% {
+        text-decoration: underline overline wavy;
+      }
+      75% {
+        text-decoration: underline dashed;
+      }
+      100% {
+        text-decoration: line-through;
+      }
+    }
+
+    &:hover {
+      text-decoration: overline;
+      cursor: grab;
+      transform: scale(110%);
+    }
+  }
+  p {
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    line-height: 25px;
+    padding: 0 100px;
+    color: #fff;
+  }
+}
