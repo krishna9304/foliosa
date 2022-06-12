@@ -19,8 +19,6 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
   const handleScroll = (e: any) => {
     const initialScroll = e.target.scrollTop;
     const val = Math.round(initialScroll / e.target.clientHeight);
-    console.log(val);
-
     setNavState(val);
   };
 
@@ -36,6 +34,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
             className={styles.navicon}
           >
             <FontAwesomeIcon icon={faUser} />
+            <span className="tooltiptext">Profile</span>
           </div>
           <div
             style={{
@@ -45,6 +44,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
             className={styles.navicon}
           >
             <FontAwesomeIcon icon={faDiagramProject} />
+            <span className="tooltiptext">Projects</span>
           </div>
           <div
             style={{
@@ -54,6 +54,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
             className={styles.navicon}
           >
             <FontAwesomeIcon icon={faBriefcase} />
+            <span className="tooltiptext">Work Experience</span>
           </div>
           <div
             style={{
@@ -63,6 +64,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
             className={styles.navicon}
           >
             <FontAwesomeIcon icon={faBuildingColumns} />
+            <span className="tooltiptext">Education</span>
           </div>
           <div
             style={{
@@ -72,6 +74,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
             className={styles.navicon}
           >
             <FontAwesomeIcon icon={faWrench} />
+            <span className="tooltiptext">Skills</span>
           </div>
         </div>
       </div>
